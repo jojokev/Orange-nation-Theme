@@ -27,7 +27,7 @@
     <?php wp_head(); ?>
     
 </head>
-<body>
+<body style="background: url(<?php echo get_template_directory_uri(); ?>/assets/imagenes/fondos/fondo-section-page.webp) center center fixed;">
     <section class="header_principal">
         <div class="header_1">
             <div class="content_header_1">
