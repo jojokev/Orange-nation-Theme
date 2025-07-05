@@ -123,9 +123,10 @@
     </div>
 </section>
 <section class="container-xl">
-    <?php get_template_part('template-parts/reviews') ?>
-    <?php get_template_part('template-parts/certificados') ?>
-    <!-- <div class="texto__blog__page">
-        the_content(); 
-    </div> -->
+    <div class="py-4">
+        <?php get_template_part('template-parts/reviews') ?>
+    </div>
+    <div class="py-4">
+        <?php get_template_part('template-parts/certificados') ?>
+    </div>
 </section>

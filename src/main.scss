@@ -13,6 +13,7 @@ $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;
 $alert-border-radius: 0;
+$box-shadow:  0 .25rem .5rem rgba(0,0,0,.15);
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 @mixin container{
@@ -136,7 +137,7 @@ h3{
 }
 .text_h2{
     text-align: center;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     h2,
     h1{
         color: $c0;
@@ -837,7 +838,7 @@ h3{
                                         display: inline-block;
                                         margin: 0;
                                         margin-bottom: 5px;
-                                        background: #fff;
+                                        background: $bg1;
                                         span{
                                             background-color: red;
                                         
@@ -2822,7 +2823,6 @@ div#app {
 }
 .container_booking{
     background-color: rgb(249, 244, 240);
-    padding-bottom: 5rem;
     .item_booking{
         @include container;
         display: flex;
@@ -4436,7 +4436,7 @@ input.flatpickr-input.flatpickr-mobile {
     height: auto;
     overflow: hidden;
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     img{
         width: 100%;
         height: auto;
@@ -4483,7 +4483,7 @@ input.flatpickr-input.flatpickr-mobile {
     justify-content: space-between;
     width: 950px;
     margin: auto;
-    padding: 2rem 0 5rem;
+    padding: 2rem 0;
     .item_package{
         width: calc(100% - 0px);
         display: flex;
@@ -5538,7 +5538,6 @@ input.flatpickr-input.flatpickr-mobile {
         }
     }
 }
-
 /* --- about us home --- */
 .col-about-home {
     display: flex;
@@ -5586,6 +5585,7 @@ input.flatpickr-input.flatpickr-mobile {
         .features-about-home-text {
             display: flex;
             justify-content: space-between;
+            align-items: start;
             margin-bottom: 1rem;
             @media (max-width: 480px){
                 flex-direction: column;
@@ -6024,173 +6024,6 @@ input.flatpickr-input.flatpickr-mobile {
         object-fit: cover;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* estilo en prueba */
-.QQQQ-bg-4{
-    padding: 3rem 0;
-    position: relative;
-    > img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -2;
-        opacity: .5;
-        filter: brightness(2);
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #ff7b382b;
-        z-index: -1;
-    }
-    .item_tour_new{
-        background: #fffbf7ba !important;
-        .text_tour .price-text-tour span{
-            background: #fffbf7ba !important;
-        }
-    }
-}
-.QQQ-bg-5{
-    padding: 3rem 0;
-    position: relative;
-    > img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -2;
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #ff7b3836;
-        z-index: -1;
-    }
-    .item_tour {
-        background: #fffbf794 !important;
-        border: none !important;
-    }   
-}
-
-/* --- Destinos home --- */
-.QQQ-content-top-destinations-home {
-    display: flex;
-    gap: .75rem;
-    .item-top-destinations-home {
-        width: 22%;
-        height: 480px;
-        border-radius: .25rem;
-        overflow: hidden;
-        position: relative;
-        transition: .25s;
-        &::before{
-            content: "";
-            top: 50%;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(180deg, #14141400 10.2%, #11150bb3 88.41%);
-            position: absolute;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .text-top-destinations-home {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            color: #fff;
-            padding: 1rem;
-            .title-text {
-                width: 100%;
-            }
-            h3 {
-                font-size: 1.25rem;
-                font-weight: 700;
-                margin: 0;
-            }
-            p {
-                color: #fff;
-                font-size: .95rem;
-                margin: 0;
-            }
-            i {
-                background: $c1;
-                border-radius: 50%;
-                padding: .5rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                font-size: 1.15rem;
-                display: none;
-                transition: .25s;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: -2px;
-                    left: -2px;
-                    right: -2px;
-                    bottom: -2px;
-                    border: 1px dashed $c1;
-                    border-radius: 50%;
-                    animation: rotacion 20s linear infinite;
-                }
-            }
-        }
-        &.active {
-            width: 34%;
-            .text-top-destinations-home i {
-                display: flex;
-            }
-        }
-    }
-}
-@keyframes rotacion{
-    from{
-        rotate:0deg
-    }
-    to{
-        rotate: 360deg;
-    }
-}
-
 /* --- inca trail tours home --- */
 .content_inca_trail {
     display: flex;
@@ -6347,7 +6180,7 @@ input.flatpickr-input.flatpickr-mobile {
     }
     .fill-col-home {
         width: 55%;
-        @media (max-width: 768px) {
+        @media (max-width: 768px){
             width: 100%;
         }
         &:last-child {

@@ -2,37 +2,37 @@
 <section class="">
     <?php if ($images): ?>
         <div class="container-xl">
-    <div class="title_single">
-        <div>
-            <h1><?php the_title(); ?></h1>
-            <span><i class="bi bi-clock"></i>
-            <?php $dias = get_field('num_days'); ?>
-            <?php echo $dias ?>
-            <?php
-                $values = $dias;
-                if($values == 1) {
-                    if(APP_LANG=='en'){
-                        echo 'day';
-                    }else{
-                        echo 'dia';
-                    }
-                } else {
-                    $night = $values - 1; 
-                    if(APP_LANG=='en'){
-                        echo 'days' , ' - ' , ''.$night.'',' nights';
-                    }else{
-                        echo 'días' , ' - ' , ''.$night.'',' noches';
-                    }
-                }
-            ?>
-            </span>
+            <div class="title_single">
+                <div>
+                    <h1><?php the_title(); ?></h1>
+                    <span><i class="bi bi-clock"></i>
+                        <?php $dias = get_field('num_days'); ?>
+                        <?php echo $dias ?>
+                        <?php
+                            $values = $dias;
+                            if($values == 1) {
+                                if(APP_LANG=='en'){
+                                    echo 'day';
+                                }else{
+                                    echo 'dia';
+                                }
+                            } else {
+                                $night = $values - 1; 
+                                if(APP_LANG=='en'){
+                                    echo 'days' , ' - ' , ''.$night.'',' nights';
+                                }else{
+                                    echo 'días' , ' - ' , ''.$night.'',' noches';
+                                }
+                            }
+                        ?>
+                    </span>
+                </div>
+                <span>
+                    <b><?php echo get_field('from'); ?><sup>USD</sup></b>
+                    <span>Price per person</span>
+                </span>
+            </div>
         </div>
-        <span>
-            <b><?php echo get_field('from'); ?><sup>USD</sup></b>
-            <span>Price per person</span>
-        </span>
-    </div>
-</div>
         <div class="container-xl">
             <div class="single_galler">
                 <div class="item_new_gallery">
@@ -70,20 +70,22 @@
                 <?php the_post_thumbnail(); ?>
             </div>
         <?php endif; ?>
-        
-        <div class="text_h2">
+        <div class="text_h2 pt-4">
             <h1><?php the_title(); ?></h1>
         </div>
     <?php endif; ?>
 </section>
 
 <div class="container-xl">
-    <div class="page_plantilla">
+    <div class="page_plantilla py-4">
         <?php the_content(); ?>
     </div>
-
-    <?php get_template_part('template-parts/reviews') ?>
-    <?php get_template_part('template-parts/certificados') ?>
+    <div class="py-4">
+        <?php get_template_part('template-parts/reviews') ?>
+    </div>
+    <div class="py-4">
+        <?php get_template_part('template-parts/certificados') ?>
+    </div>
 </div>
 
 </div>

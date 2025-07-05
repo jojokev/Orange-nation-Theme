@@ -1,4 +1,4 @@
-<div class="container_booking">
+<div class="container_booking py-4">
     <div class="text_h2">
         <h2>Steps To Book With Orange Nation</h2>
     </div>
@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container py-4">
     <div class="text_h2">
         <h1>Booking Form - <span id="storedTitle"></span></h1>
     </div>
@@ -69,6 +69,10 @@
     </script>
 </div>
 <div class="container-xl">
-    <?php get_template_part('template-parts/reviews') ?>
-    <?php get_template_part('template-parts/certificados') ?>
+    <div class="py-4">
+        <?php get_template_part('template-parts/reviews') ?>
+    </div>
+    <div class="py-4">
+        <?php get_template_part('template-parts/certificados') ?>
+    </div>
 </div>
