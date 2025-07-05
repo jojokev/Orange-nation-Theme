@@ -23,7 +23,7 @@ get_header();
 			<div class="row align-items-stretch py-3">
 				<div class="col-lg-8 text-availibility">
 					<h3>Disponibilidad del Camino Inca para 2026</h3>
-					<?php echo do_shortcode('[pear_calendar type="vertical" code="IT2D,IT4D" month="8" ]');?>
+					<?php echo do_shortcode('[pear_calendar type="vertical" code="IT2D,IT4D" month="8" id_tour="1536,1535" price="477,737"]');?>
 				</div>
 				<div class="col-lg-4">
 					<div class="position-sticky top-0">

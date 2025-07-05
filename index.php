@@ -13,6 +13,7 @@ get_header();
         <p>Discover the incredible Inca ruins, flora, fauna and magnificent landscapes along our incredible Inca Trail to Machu Piucchu tour.</p>
         <a href="<?php echo get_permalink(2695); ?>" class="btn btn-primary w-content text-light">Explore more <i class="bi bi-arrow-right-short"></i></a>
     </div>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/travelers-choise-orange.png" alt="Tripadvisor" class="tripadvisor-home-banner">
     <div class="banner-home-img">
         <img src="https://www.orange-nation.com/wp-content/uploads/2018/07/inca-trail-to-machupicchu-1-day-1.jpg">
     </div>
@@ -24,7 +25,7 @@ get_header();
         <span id="span-banner-background-home-4"></span>
     </div>
 </section>
-<div class="py-5 pb-0">
+<div class="py-5">
     <div class="container-xl">
         <div class="col-about-home">
             <div class="col-about-home-img">
@@ -49,15 +50,37 @@ get_header();
                             <li>Unique and little explored routes</li>
                             <li>Experience the culture up close.</li>
                         </ul>
+                        <a href="<?php echo get_permalink(5940); ?>" class="btn btn-primary text-light">About us <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                     <div class="button-features-about-home">
                         <a data-fslightbox href="https://www.youtube.com/watch?v=mnR1EuhJvX8">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/fondo-video.png" alt="video">
                             <i class="bi bi-play-circle"></i>
+                            <p>Watch video</p>
                         </a>
                     </div>
                 </div>
-                <a href="<?php echo get_permalink(5940); ?>" class="btn btn-primary text-light">About us <i class="bi bi-arrow-right-short"></i></a>
+                <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d15026178-Reviews-Orange_Nation_Peru-Cusco_Cusco_Region.html" target="_blank" class="info-reviews-button">
+                    <div class="title-info-reviews-button">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/iconos/tripadvisor-icon.png" alt="Tripadvisor">
+                        <p>
+                            <strong>Tripadvisor</strong>
+                            <span>Reviewed by</span>
+                        </p>
+                    </div>
+                    <div class="text-info-reviews-button">
+                        <p>
+                            <strong>5.0</strong>
+                            <i class="bi bi-circle-fill"></i>
+                            <i class="bi bi-circle-fill"></i>
+                            <i class="bi bi-circle-fill"></i>
+                            <i class="bi bi-circle-fill"></i>
+                            <i class="bi bi-circle-fill"></i>
+                        </p>
+                        <span>645 reviews</span>
+                    </div>
+                    <a href="#"></a>
+                </a>
             </div>
         </div>
         <div class="highlights-home-page">
@@ -88,17 +111,14 @@ get_header();
         </div>
     </div>
 </div>
-<div class="separador-1">
-    <?php echo file_get_contents( get_template_directory() . '/assets/imagenes/svg/mountains-separador-vector.svg');?>
-</div>
-<div class="bg-3">
+<div class="bg-1">
     <div class="container-xl">
         <div class="text_h2">
             <span class="bg-img m-auto mb-2">
                 Discover
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/svg/fondo.svg" alt="">
             </span>
-            <h2>Inca Trail to Machu Picchu <span>2025</span></h2>
+            <h2>Inca Trail to Machu Picchu <span>2026</span></h2>
         </div>
         <div class="content_inca_trail">
             <div class="item_inca_trail">
@@ -164,8 +184,8 @@ get_header();
                 endif;
                 ?>
                 <div class="buttons-inca-trail">
-                    <a href="<?php echo esc_url( get_permalink(2695) ); ?>" class="btn btn-primary text-light">Explore all tours <i class="bi bi-arrow-right-short"></i></a>
-                    <a href="<?php echo esc_url( get_permalink(7325) ); ?>" class="btn btn-secondary text-light">Check availability <i class="bi bi-calendar2-check-fill"></i></a>
+                    <a href="<?php echo esc_url( get_permalink(2695) ); ?>" class="btn btn-primary text-light mb-2">Explore all tours <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="<?php echo esc_url( get_permalink(7325) ); ?>" class="btn btn-secondary text-light mb-2">Check availability <i class="bi bi-calendar2-check-fill"></i></a>
                 </div>
             </div>
             <div class="item-text-inca-trail">
@@ -192,73 +212,19 @@ get_header();
         <div class="swiper mySwiper swiperTour">
             <div class="swiper-wrapper">
                 <?php
-                    $categoria = "machu-picchu-tp";
                     $toursofperu = get_posts([
                         'post_type' => 'post',
                         'numberposts' => 6, //cantidad de entradas
                         'order' => 'DESC',
                         'ignore_sticky_posts' => 0,
-                        'category_name' => $categoria
+                        'cat' => 976
                     ]);
 
                     foreach ($toursofperu as $post) :
                 ?>
-                <div class="swiper-slide">
-                    <div class="item_tour_new">
-                        <div class="img_tour">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium_large');
-                                } ?>
-                            </a>
-                            <span class="duration-img-tour"><i class="bi bi-clock-history"></i>
-                                <?php $dias	= get_field('num_days'); ?>
-                                    <?php if ( $dias ) { ?>
-                                        <?php echo $dias ?>
-                                        <?php
-                                            $values = $dias;
-                                            if($values == 1) {
-                                                if(APP_LANG=='en'){
-                                                    echo 'day';
-                                                }else{
-                                                    echo 'dia';
-                                                }
-                                            } else {
-                                                $night = $values - 1; 
-                                                if(APP_LANG=='en'){
-                                                    echo 'days' , ' - ' , ''.$night.'',' nights';
-                                                }else{
-                                                    echo 'días' , ' - ' , ''.$night.'',' noches';
-                                                }
-                                            }
-                                        ?>
-                                        <?php } else { ?>
-                                        <?php if(APP_LANG=='en'){
-                                                echo 'Half day';
-                                            }else{
-                                                echo 'Medio día';
-                                            } 
-                                        ?>
-                                <?php } ?>
-                            </span>
-                        </div>
-                        <div class="text_tour">
-                            <h3>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h3>
-                            <span><i class="bi bi-reception-4"></i> Max. Altitude: <?php echo get_field('max_altitude'); ?> m.a.s.l.</span>
-                            <span class="group-img-tour"><i class="bi bi-people"></i> Group Size: <?php echo get_field('group_size'); ?></span>
-                            <p class="price-text-tour">
-                                <span>Price from</span>
-                                <strong><i class="bi bi-currency-dollar"></i><?php echo the_field('from'); ?></strong>
-                                 / por person
-                            </p>
-                            <a href="<?php the_permalink(); ?>" class="link-text-tour">View Itinerary <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    <?php get_template_part('template-parts/cards-tour-1'); ?>
                 <?php  endforeach;
-                    wp_reset_postdata();
+                 wp_reset_postdata();
                 ?>
             </div>
             <div class="swiper-button-next"></div>
@@ -353,84 +319,19 @@ get_header();
         <div class="swiper mySwiper swiperTour">
             <div class="swiper-wrapper">
                 <?php
-                    $categoria = "classic-day-tours";
                     $toursofperu = get_posts([
                         'post_type' => 'post',
                         'numberposts' => 6, //cantidad de entradas
                         'order' => 'desc',
                         'ignore_sticky_posts' => 0,
-                        'category_name' => $categoria
+                        'cat' => 978
                     ]);
 
                     foreach ($toursofperu as $post) :
                 ?>
-                <div class="swiper-slide">
-                    <div class="item_tour">
-                        <div class="img_tour">
-                            <?php if (has_post_thumbnail()) {
-                                the_post_thumbnail('medium_large');
-                            } ?>
-                            <span class="duration-img-tour"><i class="bi bi-clock-history"></i>
-                                <?php $dias	= get_field('num_days'); ?>
-                                    <?php if ( $dias ) { ?>
-                                        <?php echo $dias ?>
-                                        <?php
-                                            $values = $dias;
-                                            if($values == 1) {
-                                                if(APP_LANG=='en'){
-                                                    echo 'day';
-                                                }else{
-                                                    echo 'dia';
-                                                }
-                                            } else {
-                                                $night = $values - 1; 
-                                                if(APP_LANG=='en'){
-                                                    echo 'days' , ' - ' , ''.$night.'',' nights';
-                                                }else{
-                                                    echo 'días' , ' - ' , ''.$night.'',' noches';
-                                                 }
-                                            }
-                                        ?>
-                                        <?php } else { ?>
-                                        <?php if(APP_LANG=='en'){
-                                                echo 'Half day';
-                                            }else{
-                                                echo 'Medio día';
-                                            } 
-                                        ?>
-                                <?php } ?>
-                            </span>
-                        </div>
-                        <div class="text_tour">
-                            <h3>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h3>
-                            <div class="cols-text-tour">
-                                <div class="featured-text-tour">
-                                    <div class="item_featured_card">
-                                        <i class="bi bi-reception-4"></i>
-                                        <div class="text_item_featured_card">
-                                            <p><strong>Max. Altitude: </strong><?php echo get_field('max_altitude'); ?> m.a.s.l.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item_featured_card">
-                                        <i class="bi bi-people"></i>
-                                        <div class="text_item_featured_card">
-                                            <p><strong>Group Size: </strong><?php echo get_field('group_size'); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="price-text-tour">
-                                    <span>Price from</span>
-                                    <p><strong><i class="bi bi-currency-dollar"></i><?php echo the_field('from'); ?></strong> / por person</p>
-                                </div>
-                            </div>
-                            <a href="<?php the_permalink(); ?>" class="link-text-tour">View Itinerary <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    <?php get_template_part('template-parts/cards-tour-2'); ?>
                 <?php  endforeach;
-                    wp_reset_postdata();
+                wp_reset_postdata();
                 ?>
             </div>
             <div class="swiper-button-next"></div>
@@ -528,7 +429,7 @@ get_header();
             <div class="fill-home">
                 <div class="fill-col-home">
                     <div class="title-fill-home">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/iconos/cook.png" alt="Cook Icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/iconos/social-icon.png" alt="Cook Icon">
                         <h2>Our Social Responsibility</h2>
                     </div>
                     <h3>20 % of our Profit goes to our Social Projects</h3>

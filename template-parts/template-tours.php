@@ -696,7 +696,7 @@
         </div>
     </div>
 </div>
-<div class="container-xl">
+<div class="container-xl pt-3 pb-5">
     <div class="form_booking">
         <div>
             <i clasS="bi bi-book"></i>
@@ -721,7 +721,7 @@
             if ( ! empty( $categories ) ) {
             $id = ( $categories[0]->cat_ID );
             if($id!=1991) {
-    
+                
             ?>
             <div class="swiper mySwiper swiperTour">
                 <div class="swiper-wrapper">
@@ -729,67 +729,7 @@
 
                     if ( $news->have_posts() ) :
                         while ( $news->have_posts() ) : $news->the_post(); ?>
-                    <div class="swiper-slide">
-                        <div class="item_tour_new">
-                            <div class="img_tour">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php if (has_post_thumbnail()) {
-                                        the_post_thumbnail('medium_large');
-                                    } ?>
-                                </a>
-                                <span class="duration-img-tour"><i class="bi bi-clock-history"></i>4 Days - 3 Nights</span>
-                                <span class="group-img-tour"><i class="bi bi-people"></i> <?php echo get_field('group_size'); ?></span>
-                            </div>
-                            <div class="text_tour">
-                                <span><i class="bi bi-geo-alt"></i> Cusco</span>
-                                <h3>
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h3>
-                                <span>
-                                    <i class="bi bi-clock-history"></i>
-                                    <?php $dias	= get_field('num_days'); ?>
-                                        <?php if ( $dias ) { ?>
-                                            <?php echo $dias ?>
-                                            <?php
-                                                $values = $dias;
-                                                if($values == 1) {
-                                                    if(APP_LANG=='en'){
-                                                        echo 'day';
-                                                    }else{
-                                                        echo 'dia';
-                                                    }
-                                                } else {
-                                                    $night = $values - 1; 
-                                                    if(APP_LANG=='en'){
-                                                        echo 'days' , ' - ' , ''.$night.'',' nights';
-                                                    }else{
-                                                        echo 'días' , ' - ' , ''.$night.'',' noches';
-                                                    }
-                                                }
-                                            ?>
-                                            <?php } else { ?>
-                                            <?php if(APP_LANG=='en'){
-                                                    echo 'Half day';
-                                                }else{
-                                                    echo 'Medio día';
-                                                } 
-                                            ?>
-                                    <?php } ?>
-                                </span>
-                                <!-- 
-                                <span><i class="bi bi-reception-4"></i> <?php echo get_field('max_altitude'); ?></span> -->
-                                <div class="description-text-tour">
-                                    <p><?php echo get_field('description'); ?></p>
-                                </div>
-                                <p class="price-text-tour">
-                                    <span>Price from</span>
-                                    <strong><i class="bi bi-currency-dollar"></i><?php echo the_field('from'); ?></strong>
-                                    / por person
-                                </p>
-                                <a href="<?php the_permalink(); ?>" class="link-text-tour">View Itinerary <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php get_template_part('template-parts/cards-tour-1'); ?>
                 <?php endwhile;endif;?>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -799,6 +739,10 @@
     </div>
 </div>
 <div class="container-xl">
-    <?php get_template_part('template-parts/reviews') ?>
-    <?php get_template_part('template-parts/certificados') ?>
+    <div class="py-5">
+        <?php get_template_part('template-parts/reviews') ?>
+    </div>
+    <div class="py-5">
+        <?php get_template_part('template-parts/certificados') ?>
+    </div>
 </div>
