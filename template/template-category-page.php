@@ -51,16 +51,7 @@ get_header();
                                 the_post_thumbnail('medium_large');
                             } ?>
                         </a>
-                        <span class="duration-img-tour"><i class="bi bi-clock-history"></i>4 Days - 3 Nights</span>
-                        <span class="group-img-tour"><i class="bi bi-people"></i> <?php echo get_field('group_size'); ?></span>
-                    </div>
-                    <div class="text_tour">
-                        <span><i class="bi bi-geo-alt"></i> Cusco</span>
-                        <h3>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </h3>
-                        <span>
-                            <i class="bi bi-clock-history"></i>
+                        <span class="duration-img-tour"><i class="bi bi-clock-history"></i>
                             <?php $dias	= get_field('num_days'); ?>
                                 <?php if ( $dias ) { ?>
                                     <?php echo $dias ?>
@@ -90,15 +81,17 @@ get_header();
                                     ?>
                             <?php } ?>
                         </span>
-                        <!-- 
-                        <span><i class="bi bi-reception-4"></i> <?php echo get_field('max_altitude'); ?></span> -->
-                        <div class="description-text-tour">
-                            <p><?php echo get_field('description'); ?></p>
-                        </div>
+                    </div>
+                    <div class="text_tour">
+                        <h3>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </h3>
+                        <span><i class="bi bi-reception-4"></i> Max. Altitude: <?php echo get_field('max_altitude'); ?> m.a.s.l.</span>
+                        <span class="group-img-tour"><i class="bi bi-people"></i> Group Size: <?php echo get_field('group_size'); ?></span>
                         <p class="price-text-tour">
                             <span>Price from</span>
                             <strong><i class="bi bi-currency-dollar"></i><?php echo the_field('from'); ?></strong>
-                            / por person
+                                / por person
                         </p>
                         <a href="<?php the_permalink(); ?>" class="link-text-tour">View Itinerary <i class="bi bi-arrow-right"></i></a>
                     </div>
@@ -136,7 +129,12 @@ get_header();
         ?>
 
     </div>
-    <?php get_template_part('template-parts/certificados') ?>
+    <div class="py-4">
+        <?php get_template_part('template-parts/reviews') ?>
+    </div>
+    <div class="py-4">
+        <?php get_template_part('template-parts/certificados') ?>
+    </div>
 </div>
 
 

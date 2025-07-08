@@ -78,7 +78,9 @@
 
 <div class="container-xl">
     <div class="page_plantilla py-4">
-        <?php the_content(); ?>
+        <div class="article-itinerary">
+            <?php the_content(); ?>
+        </div>
     </div>
     <div class="py-4">
         <?php get_template_part('template-parts/reviews') ?>

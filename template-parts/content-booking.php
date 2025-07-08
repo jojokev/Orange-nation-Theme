@@ -52,12 +52,16 @@
     <div class="text_h2">
         <h1>Booking Form - <span id="storedTitle"></span></h1>
     </div>
-    <div id="app"></div>
+    <div id="app" tourTitle="<?php $idTour = isset($_GET['uuid']) ? intval($_GET['uuid']) : null; echo $idTour?get_the_title($idTour):"";?>"></div>
     <script>
+        const titleStorageTour = document.getElementById('app').getAttribute('tourTitle');
+        const storedTitle = "";
+        if(titleStorageTour){
+            localStorage.setItem('tour',titleStorageTour);
+        }
+        storedTitle = localStorage.getItem('tour');
         document.addEventListener('DOMContentLoaded', (event) => {
-            const storedTitle = localStorage.getItem('tour');
             const titleElement = document.getElementById('storedTitle');
-
             if (storedTitle) {
                 titleElement.textContent = storedTitle;
             } else {
