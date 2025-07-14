@@ -137,9 +137,3 @@
         <?php get_template_part('template-parts/certificados') ?>
    </div> 
 </div>  
-<button id="top_button">
-    <i class="bi bi-arrow-up-short"></i>
-</button>
-<script>
-
-</script>

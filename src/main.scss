@@ -9,6 +9,7 @@ $bg1: #fffbf7;
 $bg2: #f8f8f8;  
 $primary: #ff7b38;
 $secondary: #131e19;
+$dark: #131e19;
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;
@@ -185,12 +186,12 @@ h3{
     }
 }
 .col6{
+    width: calc(50% - 10px);
     .dnone{
         @media (max-width:767px) {
             display: none;
         }
     }
-    width: calc(50% - 10px);
     @media (max-width:767px) {
         width: calc(100% - 0px);
         margin-bottom: 20px;
@@ -331,7 +332,7 @@ h3{
             padding: 10px 15px;
         }
         @media (max-width:720px) {
-            padding: 10px 5px;
+            padding: 10px 2px;
 
         }
         img{
@@ -392,7 +393,6 @@ h3{
                     align-items: center;
                     border: 1px solid #ddd;
                     padding: .5rem 1.5rem;
-                    
                     @media (max-width:991px) {
                         margin-left: 0;
                         margin-right: 5px;
@@ -402,7 +402,7 @@ h3{
                     }
                     @media (max-width:767px) {
                         font-size: 12px;
-                        padding: .25rem .5rem;
+                        padding: .25rem .35rem;
                         &:first-child{
                             background-color: red;
                             display: none;
@@ -606,7 +606,7 @@ h3{
                             li{
                                 a{
                                     pointer-events: inherit !important;
-                                    padding: 10px 0 !important;
+                                    padding: 10px !important;
                                 }
                             }
                         }
@@ -1541,7 +1541,7 @@ h3{
 .swiper {
     position: relative;
     overflow: hidden;
-    padding: 0 .5rem;
+    padding: .25rem;
     .swiper-button-next,
     .swiper-button-prev{
         background-color: #fff;
@@ -2551,24 +2551,36 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    div{
-        background: transparent;
-        div{
-            border: 0 !important;
-            width: 100% !important;
-            a{
-                margin-top: 0;
-            }
+}
+.tripadvisor-orange-nation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 1rem auto;
+    p {
+        text-decoration: underline;
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+    svg {
+        height: 12px;
+        width: auto;
+        path {
+            fill: #00aa6c;
         }
     }
-    a{
-        
-        text-decoration: none;
-        color: $c1;
-        display: inline-block;
-        margin-top: 15px;
+    span {
+        font-size: .8rem;
+        color: #666;
+        margin-bottom: .5rem;
+    }
+    img {
+        width: 120px;
+        height: auto;
     }
 }
+
 /*----------------------------------------------- Formulario de reserva ---------------------------------------------------*/
 .form_content{
     border: 1px solid #eee;
@@ -3047,8 +3059,7 @@ input.flatpickr-input.flatpickr-mobile {
     h2,
     h3,
     h4{
-        margin-bottom: 15px;
-        
+        margin-bottom: 1rem;
         color: $c0;
     }
     h3{
@@ -3122,7 +3133,7 @@ input.flatpickr-input.flatpickr-mobile {
     max-width: 1280px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    margin: .75rem auto;
+    margin: 1rem auto;
     flex-wrap: wrap;
     .column_text_page {
         padding: 1rem;
@@ -3267,7 +3278,7 @@ input.flatpickr-input.flatpickr-mobile {
 .item-category-tour {
     display: flex;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
     @media (max-width: 768px) {
         flex-wrap: wrap;
     }
@@ -3290,10 +3301,11 @@ input.flatpickr-input.flatpickr-mobile {
         > a {
             display: block;
             margin-bottom: .5rem;
+            width: 100%;
             img {
                 width: 100%;
                 height: auto;
-                max-height: 480px;
+                max-height: 420px;
                 min-height: 360px;
                 object-fit: cover;
                 @media (max-width: 768px) {
@@ -3462,8 +3474,14 @@ input.flatpickr-input.flatpickr-mobile {
 
 }
 .faqs-category-tour{
+    br{
+        display: none;
+    }
     .accordion-item{
         border-color: #fff;
+        > h3{
+            margin: 0;
+        }
     }
     .accordion-button{
         font-weight: 500;
@@ -5000,8 +5018,14 @@ input.flatpickr-input.flatpickr-mobile {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    @media (max-width:768px) {
+        flex-wrap: wrap;
+    }
     div{
         line-height: 1.3;
+        @media (max-width:768px) {
+            margin-bottom: 1rem;
+        }
         h1{
             
             font-size: 32px;
@@ -5374,7 +5398,7 @@ input.flatpickr-input.flatpickr-mobile {
     justify-content: space-between;
     flex-wrap: wrap;
     .title_items_blog {
-        background: $c2;
+        background: $bg2;
         padding: .5rem;
         margin-bottom: 1rem;
         
@@ -5662,6 +5686,7 @@ input.flatpickr-input.flatpickr-mobile {
     background: $c0;
     color: #fff;
     box-shadow: 0px 0px 1px 0px #fff;
+    z-index: 20;
     @media (max-width: 767px) {
         bottom: 126px;
         right: 10px;
@@ -5851,6 +5876,7 @@ input.flatpickr-input.flatpickr-mobile {
         filter: brightness(0.5);
         @media (max-width: 480px) {
             right: 0;
+            background-position: 20% top !important;
         }
     }
 }
@@ -6174,7 +6200,7 @@ input.flatpickr-input.flatpickr-mobile {
                         font-size: .9rem;
                         @include box-line($line:1);
                         strong{
-                            font-weight: 500;
+                            font-weight: 600;
                         }
                     }
                     i {
@@ -6218,6 +6244,7 @@ input.flatpickr-input.flatpickr-mobile {
     flex-direction: column;
     border: 1px solid #ddd;
     background-color: $bg1;
+    height: 100%;
     .img_tour {
         padding: .5rem;
         padding-bottom: 0;
@@ -6384,7 +6411,7 @@ input.flatpickr-input.flatpickr-mobile {
                     line-height: 1.35;
                 }
                 .col-text-inca-trail {
-                    width: 75%;
+                    width: 72%;
                     h3 {
                         font-size: 1.15rem;
                         margin-bottom: .75rem;
@@ -6395,17 +6422,26 @@ input.flatpickr-input.flatpickr-mobile {
                     }
                 }
                 .price-inca-trail {
+                    width: 28%;
+                    padding-left: .5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
                     span{
                         margin-bottom: .25rem;
                         &:last-of-type{
                             margin-bottom: .5rem;
                         }
                     }
-                    width: 25%;
-                    padding-left: .5rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: end;
+                    a{
+                        background: $c1;
+                        color: #fff;
+                        text-align: center;
+                        padding: .25rem .5rem;
+                        font-weight: 500;
+                        font-size: .9rem;
+                        width: fit-content;
+                    }
                 }
                 .recommended{
                     position: absolute;

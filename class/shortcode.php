@@ -77,7 +77,7 @@
     */
     public function accordionsFaq($atts, $content = null){
       $content = do_shortcode(shortcode_unautop($content));
-      return '<div class="accordion" id="accordionFaqs">'. $content .'</div>';
+      return '<div class="faqs-category-tour"><div class="accordion" id="accordionFaqs">'. $content .'</div></div>';
     }
     public function accordionItemFaq($atts, $content = null){
       $content = do_shortcode(shortcode_unautop($content));

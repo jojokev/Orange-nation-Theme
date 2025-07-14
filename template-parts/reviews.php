@@ -79,7 +79,12 @@
             </div>
         </div>
         <div class="tripadvisor_logo">
-            <div id="TA_cdsratingsonlynarrow336" class="TA_cdsratingsonlynarrow"><ul id="zqyrCjOX" class="TA_links Qzp8nO8"><li id="aLui8v0zFX2I" class="NEsci3iTnt"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g294314-d15026178-Reviews-Orange_Nation_Peru-Cusco_Cusco_Region.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=336&amp;locationId=15026178&amp;lang=en_US&amp;border=false&amp;shadow=false&amp;backgroundColor=white&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d15026178-Reviews-Orange_Nation_Peru-Cusco_Cusco_Region.html" target="_blank" class="tripadvisor-orange-nation">
+                <p>Orange Nation Peru</p>
+                <svg class="evwcZ" viewBox="0 0 128 24" width="88" height="16" aria-labelledby=":lithium-R28jaqaf4v9bqauen9:" data-automation="bubbleRatingImage"><title id=":lithium-R28jaqaf4v9bqauen9:">5 of 5 bubbles</title><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(104 0)"></path></svg>
+                <span>658 reviews</span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/iconos/tripadvisor-logo-completo.png" alt="logo tripadvisor">
+            </a>
             <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d15026178-Reviews-Orange_Nation_Peru-Cusco_Cusco_Region.html" target="_blank" class="see_more_rev btn btn-primary text-light">
                 See All Reviews <i class="bi bi-arrow-right"></i>
             </a>

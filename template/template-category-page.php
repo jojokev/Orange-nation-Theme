@@ -8,7 +8,7 @@ get_header();
 
 <section class="banner_title_page">
     <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('full'); ?>
     <?php endif; ?>
     <div class="text_h2 py-5">
         <h1><?php the_title(); ?></h1>
@@ -108,14 +108,7 @@ get_header();
         </div>
     </section>
 <?php }?>
-<section class="py-5">
-    <div class="container-xl">
-        <div class="article-itinerary">
-            <?php the_content(); ?>
-        </div>
-    </div>
-</section>
-<?php if(true){ ?><!-- get_the_ID()===2698 -->
+<?php if(get_the_ID()===2698){ ?><!-- get_the_ID()===2698 -->
     <section class="py-5">
         <div class="container-xl">
             <div class="item-category-tour">
@@ -138,18 +131,18 @@ get_header();
                     <div class="features-text-item-category">
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20h.01M7 20v-4m5 4v-8m5 8V8"/></svg>
-                            <h4>Difucultad:</h4>
-                            <p>Moderado</p>
+                            <h4>Difficulty:</h4>
+                            <p>Moderate</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="currentColor"><path d="M16 32c8.822 0 16-7.178 16-16S24.822 0 16 0S0 7.178 0 16s7.178 16 16 16m0-31c8.271 0 15 6.729 15 15s-6.729 15-15 15S1 24.271 1 16S7.729 1 16 1"/><path d="M20.061 21.768a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.707L16 16.293V9.319a.5.5 0 0 0-1 0V16.5c0 .133.053.26.146.354z"/><circle cx="4" cy="16" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="16" cy="4" r="1"/><circle cx="16" cy="28" r="1"/><circle cx="8" cy="8" r="1"/><circle cx="24" cy="24" r="1"/><circle cx="25" cy="8" r="1"/><circle cx="8" cy="24" r="1"/></g></svg>
                             <h4>Duration:</h4>
-                            <p>desde 2 dias</p>
+                            <p>From 2 days</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"/><path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"/><path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
                             <h4>Group Size:</h4>
-                            <p>max. 8 personas</p>
+                            <p>Up to 8 people</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m18 10l-3 1.5l-4-3l-1 5.5l3.5 3l.5 4.5m4-13v13M10 17l-2 4.5m.5-13C7 9.5 6 12 6 12l2 1m4-6.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/></svg>
@@ -157,18 +150,18 @@ get_header();
                             <p>Trekking</p>
                         </div>
                     </div>
-                    <p class="price-tour"><strong>Precio:</strong> desde <span><i class="bi bi-currency-dollar"></i>45</span> / por persona</p>
-                    <a href="#" class="btn-1">See all Inca Trail tours</a>
+                    <p class="price-tour"><strong>Price:</strong> from <span><i class="bi bi-currency-dollar"></i>297</span> / per Person</p>
+                    <a href="https://www.orange-nation.com/salkantay-treks/" class="btn-1">See all Salkantay Treks <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
             <div class="item-category-tour">
                 <div class="gal-item-category-tour">
                     <?php 
-                        $image_ids = [17165, 12752, 16862, 12261, 17169];
+                        $image_ids = [15090, 12038, 15084, 11590, 11601];
                         foreach ($image_ids as $image_id) {
                             $image_url = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_url) {
-                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Salkantay Trek" data-fslightbox="gallery-1">
+                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Lares Trek" data-fslightbox="gallery-2">
                                         <img src="' . esc_url($image_url[0]) . '" alt="Imagen" class="mi-clase-img">
                                     </a>';
                             }
@@ -181,18 +174,18 @@ get_header();
                     <div class="features-text-item-category">
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20h.01M7 20v-4m5 4v-8m5 8V8"/></svg>
-                            <h4>Difucultad:</h4>
-                            <p>Moderado</p>
+                            <h4>Difficulty:</h4>
+                            <p>Moderate</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="currentColor"><path d="M16 32c8.822 0 16-7.178 16-16S24.822 0 16 0S0 7.178 0 16s7.178 16 16 16m0-31c8.271 0 15 6.729 15 15s-6.729 15-15 15S1 24.271 1 16S7.729 1 16 1"/><path d="M20.061 21.768a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.707L16 16.293V9.319a.5.5 0 0 0-1 0V16.5c0 .133.053.26.146.354z"/><circle cx="4" cy="16" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="16" cy="4" r="1"/><circle cx="16" cy="28" r="1"/><circle cx="8" cy="8" r="1"/><circle cx="24" cy="24" r="1"/><circle cx="25" cy="8" r="1"/><circle cx="8" cy="24" r="1"/></g></svg>
                             <h4>Duration:</h4>
-                            <p>desde 2 dias</p>
+                            <p>From 3 days</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"/><path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"/><path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
                             <h4>Group Size:</h4>
-                            <p>max. 8 personas</p>
+                            <p>Up to 8 people</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m18 10l-3 1.5l-4-3l-1 5.5l3.5 3l.5 4.5m4-13v13M10 17l-2 4.5m.5-13C7 9.5 6 12 6 12l2 1m4-6.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/></svg>
@@ -200,18 +193,18 @@ get_header();
                             <p>Trekking</p>
                         </div>
                     </div>
-                    <p class="price-tour"><strong>Precio:</strong> desde <span><i class="bi bi-currency-dollar"></i>45</span> / por persona</p>
-                    <a href="#" class="btn-1">See all Inca Trail tours</a>
+                    <p class="price-tour"><strong>Price:</strong> from <span><i class="bi bi-currency-dollar"></i>477</span> / per Person</p>
+                    <a href="https://www.orange-nation.com/lares-treks/" class="btn-1">See all Lares Treks <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
             <div class="item-category-tour">
                 <div class="gal-item-category-tour">
                     <?php 
-                        $image_ids = [17165, 12752, 16862, 12261, 17169];
+                        $image_ids = [16883, 13086, 15206, 16886, 17132];
                         foreach ($image_ids as $image_id) {
                             $image_url = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_url) {
-                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Salkantay Trek" data-fslightbox="gallery-1">
+                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Rainbow Mountain Trek" data-fslightbox="gallery-3">
                                         <img src="' . esc_url($image_url[0]) . '" alt="Imagen" class="mi-clase-img">
                                     </a>';
                             }
@@ -224,18 +217,18 @@ get_header();
                     <div class="features-text-item-category">
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20h.01M7 20v-4m5 4v-8m5 8V8"/></svg>
-                            <h4>Difucultad:</h4>
-                            <p>Moderado</p>
+                            <h4>Difficulty:</h4>
+                            <p>Moderate</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="currentColor"><path d="M16 32c8.822 0 16-7.178 16-16S24.822 0 16 0S0 7.178 0 16s7.178 16 16 16m0-31c8.271 0 15 6.729 15 15s-6.729 15-15 15S1 24.271 1 16S7.729 1 16 1"/><path d="M20.061 21.768a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.707L16 16.293V9.319a.5.5 0 0 0-1 0V16.5c0 .133.053.26.146.354z"/><circle cx="4" cy="16" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="16" cy="4" r="1"/><circle cx="16" cy="28" r="1"/><circle cx="8" cy="8" r="1"/><circle cx="24" cy="24" r="1"/><circle cx="25" cy="8" r="1"/><circle cx="8" cy="24" r="1"/></g></svg>
                             <h4>Duration:</h4>
-                            <p>desde 2 dias</p>
+                            <p>From 1 day</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"/><path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"/><path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
                             <h4>Group Size:</h4>
-                            <p>max. 8 personas</p>
+                            <p>Up to 8 people</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m18 10l-3 1.5l-4-3l-1 5.5l3.5 3l.5 4.5m4-13v13M10 17l-2 4.5m.5-13C7 9.5 6 12 6 12l2 1m4-6.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/></svg>
@@ -243,18 +236,18 @@ get_header();
                             <p>Trekking</p>
                         </div>
                     </div>
-                    <p class="price-tour"><strong>Precio:</strong> desde <span><i class="bi bi-currency-dollar"></i>45</span> / por persona</p>
-                    <a href="#" class="btn-1">See all Inca Trail tours</a>
+                    <p class="price-tour"><strong>Price:</strong> from <span><i class="bi bi-currency-dollar"></i>97</span> / per Person</p>
+                    <a href="https://www.orange-nation.com/rainbow-mountain-treks/" class="btn-1">See all Rainbow Mountain treks <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
             <div class="item-category-tour">
                 <div class="gal-item-category-tour">
                     <?php 
-                        $image_ids = [17165, 12752, 16862, 12261, 17169];
+                        $image_ids = [16468, 16476, 16546, 3247, 3248];
                         foreach ($image_ids as $image_id) {
                             $image_url = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_url) {
-                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Salkantay Trek" data-fslightbox="gallery-1">
+                                echo '<a href="' . esc_url($image_url[0]) . '" alt="Choquequirao Trek" data-fslightbox="gallery-4">
                                         <img src="' . esc_url($image_url[0]) . '" alt="Imagen" class="mi-clase-img">
                                     </a>';
                             }
@@ -267,18 +260,18 @@ get_header();
                     <div class="features-text-item-category">
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20h.01M7 20v-4m5 4v-8m5 8V8"/></svg>
-                            <h4>Difucultad:</h4>
-                            <p>Moderado</p>
+                            <h4>Difficulty:</h4>
+                            <p>Formidable</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="currentColor"><path d="M16 32c8.822 0 16-7.178 16-16S24.822 0 16 0S0 7.178 0 16s7.178 16 16 16m0-31c8.271 0 15 6.729 15 15s-6.729 15-15 15S1 24.271 1 16S7.729 1 16 1"/><path d="M20.061 21.768a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.707L16 16.293V9.319a.5.5 0 0 0-1 0V16.5c0 .133.053.26.146.354z"/><circle cx="4" cy="16" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="16" cy="4" r="1"/><circle cx="16" cy="28" r="1"/><circle cx="8" cy="8" r="1"/><circle cx="24" cy="24" r="1"/><circle cx="25" cy="8" r="1"/><circle cx="8" cy="24" r="1"/></g></svg>
                             <h4>Duration:</h4>
-                            <p>desde 2 dias</p>
+                            <p>From 4 days</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"/><path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"/><path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
                             <h4>Group Size:</h4>
-                            <p>max. 8 personas</p>
+                            <p>Up to 8 people</p>
                         </div>
                         <div class="featured-text-item-category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m18 10l-3 1.5l-4-3l-1 5.5l3.5 3l.5 4.5m4-13v13M10 17l-2 4.5m.5-13C7 9.5 6 12 6 12l2 1m4-6.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/></svg>
@@ -286,13 +279,20 @@ get_header();
                             <p>Trekking</p>
                         </div>
                     </div>
-                    <p class="price-tour"><strong>Precio:</strong> desde <span><i class="bi bi-currency-dollar"></i>45</span> / por persona</p>
-                    <a href="#" class="btn-1">See all Inca Trail tours</a>
+                    <p class="price-tour"><strong>Price:</strong> from <span><i class="bi bi-currency-dollar"></i>537</span> / per Person</p>
+                    <a href="https://www.orange-nation.com/choquequirao-treks/" class="btn-1">See all Choquequirao Treks <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
         </div>
     </section>
 <?php }?>
+<section class="py-5">
+    <div class="container-xl">
+        <div class="article-itinerary">
+            <?php the_content(); ?>
+        </div>
+    </div>
+</section>
 <section class="bg-4">
     <div class="container-xl">
         <div class="text_h2 ">
@@ -342,11 +342,9 @@ get_header();
                 <h2>Frequently Asked Questions</h2>
                 <p>Everything you need to know before your adventure begins.</p>
             </div>
-            <div class="faqs-category-tour">
-                <?php 
-                    echo get_field('preguntas_frecuentes');
-                ?>
-            </div>
+            <?php 
+                echo get_field('preguntas_frecuentes');
+            ?>
         </div>
     </section>
 <?php }?>

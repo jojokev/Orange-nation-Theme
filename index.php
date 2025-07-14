@@ -5,7 +5,6 @@
 get_header();
 ?>
 
-
 <section class="banner-home-page">
     <div class="banner-home-text">
         <span>The best way to get to the 7th wonder of the world</span>
@@ -15,10 +14,17 @@ get_header();
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/imagenes/travelers-choise-orange.png" alt="Tripadvisor" class="tripadvisor-home-banner">
     <div class="banner-home-img">
-        <img src="https://www.orange-nation.com/wp-content/uploads/2018/07/inca-trail-to-machupicchu-1-day-1.jpg">
+        <?php
+            $image_id = 16360; 
+            $image = wp_get_attachment_image_src($image_id, 'full');
+        ?>
+        <img src="<?php echo esc_url($image[0]); ?>" alt="Inca trail trek">
     </div>
-    <!-- background: url(https://www.orange-nation.com/wp-content/uploads/2025/07/img-persona-machu-picchu.webp -->
-    <div class="banner-home-background" style="background: url(https://www.orange-nation.com/wp-content/uploads/2025/07/banner-fondo-machu-picchu.webp) left top no-repeat fixed;">
+    <?php
+            $image_id = 17269; 
+            $image = wp_get_attachment_image_src($image_id, 'full');
+        ?>
+    <div class="banner-home-background" style="background: url(<?php echo esc_url($image[0]); ?>) left top no-repeat fixed;">
         <span id="span-banner-background-home-1"></span>
         <span id="span-banner-background-home-2"></span>
         <span id="span-banner-background-home-3"></span>
@@ -193,7 +199,7 @@ get_header();
                             <span>From</span>
                             <strong>$<?php echo the_field('from'); ?></strong>
                             <span>per person</span>
-                            <a class="btn btn-primary text-light" href="<?php the_permalink(); ?>">See more</a>
+                            <a href="<?php the_permalink(); ?>">View Itinerary</a>
                         </div>
                         <span class="recommended">Recommended<i class="bi bi-heart-fill"></i></span>
                     </div>
@@ -209,7 +215,11 @@ get_header();
                 </div>
             </div>
             <div class="item-text-inca-trail">
-                <img src="https://www.orange-nation.com/wp-content/uploads/2018/07/classic-inca-trail-1.jpg" alt="Inca Trail Trek">
+                <?php
+                    $image_id = 10216; 
+                    $image = wp_get_attachment_image_src($image_id, 'full');
+                ?>
+                <img src="<?php echo esc_url($image[0]); ?>" alt="Inca trail trek">
                 <h3>Inca Experience: A Journey in Time</h3>
                 <p>
                     The Inca Trail is often known simply by its name: "The Inca Trail." It is a famous trekking route in Peru that leads to the ancient Inca city of Machu Picchu. This trail is famous for its stunning natural beauty, archaeological sites and historical importance. While there is no specific title or alternative name for the Inca Trail itself, it is sometimes described as the "Inca Trail to Machu Picchu" to emphasize its destination.
@@ -359,7 +369,7 @@ get_header();
         </div>
     </div>
 </div>
-<div class="py-5 bg-1">
+<div class="bg-4">
    <div class="container-xl">
         <div class="fill-home">
             <div class="fill-col-home">
@@ -443,7 +453,7 @@ get_header();
 
     </div>
 </div>
-<div class="py-5 bg-1">
+<div class="bg-4">
     <div class="social_project">
         <div class="container-xl">
             <div class="fill-home">

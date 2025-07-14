@@ -87,6 +87,9 @@
         </div>
     </div>
 </footer>
+<button id="top_button">
+    <i class="bi bi-arrow-up-short"></i>
+</button>
 <?php wp_footer(); ?>
 </body>
-</html> 
+</html>
