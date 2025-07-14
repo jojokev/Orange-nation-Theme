@@ -60,11 +60,13 @@ get_header();
 	
 </section>
 
-<div class="bg-1">
-	<div class="container-xl">
-        <?php get_template_part('template-parts/reviews') ?>
-        <?php get_template_part('template-parts/certificados') ?>
-    </div>
+<div class="container-xl">
+	<div class="py-4">
+		<?php get_template_part('template-parts/reviews') ?>
+	</div>
+	<div class="py-4">
+		<?php get_template_part('template-parts/certificados') ?>
+	</div>
 </div>
 
 <?php get_footer();?>

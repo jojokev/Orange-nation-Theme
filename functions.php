@@ -56,12 +56,6 @@ if (function_exists('register_sidebar')) {
 
 }
 add_theme_support( 'custom-logo' );
-function Calendar (){
-// [SamCalendarAlternative rtu="1" package="IT18" lang="en"] plugin Alternative	
-    return '<iframe style="border:0; padding:0; height:500px;width: 100%;" src="https://disponibilidad.net.pe/integ/20/en/0?agrupar=160"></iframe>';
-
-}
-add_shortcode('Calendar','Calendar');
 
 function custom_register_rest_field() {
     register_rest_field(
@@ -97,7 +91,6 @@ function custom_register_rest_field() {
 }
 
 add_action('rest_api_init', 'custom_register_rest_field');
-
 
 function wpb_posts_nav(){
     $next_post = get_next_post();

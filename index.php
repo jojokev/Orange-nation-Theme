@@ -83,31 +83,51 @@ get_header();
                 </a>
             </div>
         </div>
-        <div class="highlights-home-page">
-            <div class="item-highlight-home">
-                <i class="bi bi-sliders"></i>
-                <h2>Authentic and personalized experiences</h2>
-                <p><strong>Customization</strong></p>
-                <span>We design unique tours through Peru, tailored just for you.</span>
+        <div class="swiper mySwiper swiper-about-us">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="item-highlight-home">
+                        <i class="bi bi-sliders"></i>
+                        <h2>Authentic and personalized experiences</h2>
+                        <p><strong>Customization</strong></p>
+                        <span>We design unique tours through Peru, tailored just for you.</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item-highlight-home">
+                        <i class="bi bi-star-fill"></i>
+                        <h2>Leadership with real-world experience</h2>
+                        <p><strong>Track Record</strong></p>
+                        <span>Our team understands service from the ground up to excellence.</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item-highlight-home">
+                        <i class="bi bi-people-fill"></i>
+                        <h2>Small groups, deeper connection</h2>
+                        <p><strong>Connection</strong></p>
+                        <span>Small groups for closer and safer attention.</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item-highlight-home">
+                        <i class="bi bi-headset"></i>
+                        <h2>Personalized attention at all times</h2>
+                        <p><strong>Commitment</strong></p>
+                        <span>We take care of every detail before, during, and after your trip.</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item-highlight-home">
+                        <i class="bi bi-tags"></i>
+                        <h2>Excellent quality at the best price</h2>
+                        <p><strong>Value</strong></p>
+                        <span>We offer exceptional service and unforgettable experiences without overpaying. </span>
+                    </div>
+                </div>
             </div>
-            <div class="item-highlight-home">
-                <i class="bi bi-star-fill"></i>
-                <h2>Leadership with real-world experience</h2>
-                <p><strong>Track Record</strong></p>
-                <span>Our team understands service from the ground up to excellence.</span>
-            </div>
-            <div class="item-highlight-home">
-                <i class="bi bi-people-fill"></i>
-                <h2>Small groups, deeper connection</h2>
-                <p><strong>Connection</strong></p>
-                <span>Small groups for closer and safer attention.</span>
-            </div>
-            <div class="item-highlight-home">
-                <i class="bi bi-headset"></i>
-                <h2>Personalized attention at all times</h2>
-                <p><strong>Commitment</strong></p>
-                <span>We take care of every detail before, during, and after your trip.</span>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </div>
@@ -235,7 +255,7 @@ get_header();
 <div class="bg-2">
     <div class="container-xl">
         <div class="text_h2">
-            <h2 class="text-light">Creating trips for every travel style</h2>
+            <h2>Creating trips for every travel style</h2>
             <p>Immerse yourself in the rich history and culture of Peru. Tour the ancient ruins of Machu Picchu, stroll through the colonial streets of Cusco, enjoy an unforgettable family vacation.</p>
         </div>
         <div class="swiper destination">

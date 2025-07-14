@@ -96,6 +96,28 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     },
   });
+  var swiper4 = new Swiper(".swiper-about-us", {
+    slidesPerView: 4,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      350: {
+        slidesPerView: 1,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
 });
 
 const menuItems = document.querySelectorAll(".normal_menu, .mega_menu");

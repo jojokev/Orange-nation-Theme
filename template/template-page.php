@@ -35,12 +35,12 @@ $images = get_post_meta(get_the_ID(), 'vdw_gallery_id', true);
             ?>
         </div>
     </div>
-    <div class="container-xl 666">
+    <div class="container-xl">
 
         <div class="text_h2">
             <h1><?php the_title(); ?></h1>
         </div>
-        <div class="wp_page">
+        <div class="wp_page page_plantilla">
             <?php the_content(); ?>
         </div>
     </div>
